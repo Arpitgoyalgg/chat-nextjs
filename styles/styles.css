@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Sunflower:300');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Cabin Sketch',  'Microsoft JhengHei', '微軟正黑體', sans-serif;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.app-messenger {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    background-color:rgb(128, 221, 255);
+}
+
+.header-content {
+    position: fixed;
+    /* height: 100%; */
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 7vh;
+    color: #FFFFFF;
+
+}
+
+.header-right {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+    line-height: 9vh;
+
+}
+
+.usr-img {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usr-img img {
+    max-height: 50vh;
+    width: auto;
+}
+
+.header-right p {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+
+
+
+
+.main {
+    display: flex;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+.sidebar-left {
+    width: 20%;
+    border-right: 1px solid #FFFFFF;
+    background-color: rgba(218, 241, 249, 0.509);
+    overflow-y: auto;
+
+}
+
+
+.usr-channel {
+    height: 16vh;
+    border-bottom: 1px solid rgb(212, 241, 250);
+}
+
+.usr-channel:hover {
+    /* padding: 2vh; */
+    background-color: #9EE0F8;
+}
+
+
+.channel-body {
+    padding: 2vh;
+    color: #9EE0F8;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.channel-body-selected {
+    padding: 2vh;
+    background-color: #FFFFFF;
+    border: 3px solid rgb(212, 241, 250);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+.channel-img img {
+    height: 8vh;
+    width: 4vw;
+
+    border-radius: 50%;
+    margin: 2vh;
+}
+
+.channel-usr {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    padding-left: 1vw;
+    line-height: 12vh;
+    margin: auto 0;
+    font-weight: 100;
+    color: rgb(128, 221, 255);
+
+    font-size: 4vh;
+    display: inline;
+
+}
+
+
+.usr-channel-alert {
+    animation-iteration-count: infinite;
+    -webkitanimation-iteration-count: infinite;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: alert;
+    animation-duration: 0.5s;
+}
+
+@keyframes alert {
+    0%   {background-color: rgb(128, 221, 255); color: #FFFFFF;}
+    50% {background-color: rgb(255, 255, 255); }
+    100%   {background-color: rgb(128, 221, 255); color: #FFFFFF;}
+}
+
+@-webkit-keyframes alert {
+    0%   {background-color: rgb(128, 221, 255); color: #FFFFFF;}
+    50% {background-color: rgb(255, 255, 255); }
+    100%   {background-color: rgb(128, 221, 255); color: #FFFFFF;}
+}
+
+
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.messages {
+    height: 85%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+
+
+}
+
+.ur-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2vw;
+    flex-shrink: 0;
+
+
+
+
+
+}
+
+.my-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2vw;
+    flex-shrink: 0;
+
+
+}
+
+.usr-img img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+}
+
+.msg-body {
+    font-size: 3vh;
+    margin-top: 1vh;
+    max-width: 40%;
+
+
+
+
+}
+
+.msg-author {
+    margin-top: 1vh;
+    color: rgb(136, 137, 138);
+    font-weight: 100;
+}
+
+.msg-txt.ur {
+    background: #F1F0F0;
+    color: #000000;
+    padding: 2vh;
+    border-radius: 10px;
+    overflow-x: hidden;
+    word-break: break-all;
+
+}
+
+.msg-txt.my {
+    background: #9EE0F8;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2vh;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+
+.input-place {
+    font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    border: 1px solid rgb(212, 241, 250);
+    height: 15%;
+    display: flex;
+    background-color: hsl(240, 5%, 90%);
+}
+
+.input-msg {
+    border: None;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    font-size: 3vh;
+    color: rgb(136, 137, 138);
+    font-weight: 100;
+}
+
+.send-btn{
+    width: 12%;
+    height: 100%;
+    background-color: #9EE0F8;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 100em;
+}
