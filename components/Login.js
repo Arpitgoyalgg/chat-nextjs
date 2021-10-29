@@ -6,8 +6,8 @@ export default function Login(props) {
 
     return (
         <>
-            <div className = "UserListContainer">
-                <div className = "ListWrapper">
+            <div className="UserListContainer">
+                <div className="ListWrapper">
                     <h3> L O G I N </h3>
 
                     <button className="UserWrapper" onClick={() => handleLogin('Arpit')}><span>Arpit</span></button>

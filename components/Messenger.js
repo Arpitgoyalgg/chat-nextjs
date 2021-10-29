@@ -1,4 +1,4 @@
-import {useState,useEffect} from "react";
+import {useState, useEffect} from "react";
 
 export default function Messenger(props) {
 
@@ -8,7 +8,7 @@ export default function Messenger(props) {
 
     useEffect(() => {
         window.addEventListener('resize', _onResize);
-    },[]);
+    }, []);
 
     function _onResize() {
         setHeight(window.innerHeight)
@@ -34,9 +34,9 @@ export default function Messenger(props) {
 
     function handleKeyPress(e) {
 
-        if(e.key === 'Enter'){
+        if (e.key === 'Enter') {
             addTestMessages();
-            if(e.preventDefault) {
+            if (e.preventDefault) {
                 e.preventDefault();
             }
         }
@@ -44,8 +44,9 @@ export default function Messenger(props) {
 
     const renderChat = (usr_data) => (
 
-        <div className={`usr-channel${(props.alert[usr_data])? '-alert' : ''}`} onClick={() => props.setChatUser(usr_data)} >
-            <div className={`channel-body${(props.curChatUser === usr_data)? '-selected' : ''}`} >
+        <div className={`usr-channel${(props.alert[usr_data]) ? '-alert' : ''}`}
+             onClick={() => props.setChatUser(usr_data)}>
+            <div className={`channel-body${(props.curChatUser === usr_data) ? '-selected' : ''}`}>
                 <div className="channel-img">
                     {/*<img src = {avatar}></img>*/}
                 </div>
@@ -58,16 +59,16 @@ export default function Messenger(props) {
     );
 
     const renderMsg = (d) => (
-        <div className={`${(props.myName===d.author) ? 'my' : 'ur'}-message`}>
+        <div className={`${(props.myName === d.author) ? 'my' : 'ur'}-message`}>
             <div className="msg-body">
                 <div className="msg-author">{d.author}</div>
-                <div className={`msg-txt ${(props.myName===d.author) ? 'my' : 'ur'}`}>{d.text}</div>
+                <div className={`msg-txt ${(props.myName === d.author) ? 'my' : 'ur'}`}>{d.text}</div>
             </div>
         </div>
     )
 
 
-    const style={
+    const style = {
         height: height,
     }
 
@@ -84,8 +85,8 @@ export default function Messenger(props) {
             <div className="main">
                 <div className="sidebar-left">
                     {
-                        Object.keys(props.database).filter(k=>k.includes(props.myName))
-                            .map(d => renderChat(d.replace(props.myName, "").replace(":","")))
+                        Object.keys(props.database).filter(k => k.includes(props.myName))
+                            .map(d => renderChat(d.replace(props.myName, "").replace(":", "")))
                     }
                 </div>
                 <div className="content">
@@ -96,7 +97,8 @@ export default function Messenger(props) {
 
                     </div>
                     <div className="input-place">
-                        <textarea className="input-msg" placeholder="type something..." value={inputMsg} onChange={handleChange} onKeyPress={handleKeyPress}></textarea>
+                        <textarea className="input-msg" placeholder="type something..." value={inputMsg}
+                                  onChange={handleChange} onKeyPress={handleKeyPress}></textarea>
                         <button className="send-btn" onClick={addTestMessages}>Send</button>
                     </div>
                 </div>
