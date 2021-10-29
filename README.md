@@ -6,7 +6,7 @@ This is chat web app built using next.js(reactjs) and express.js which is using 
 
 # Demo-Preview
 
-Live project is [here]().
+Live project is [here](http://chat-nextjs.vercel.app/).
 
 # Installation
 [(Back to top)](#table-of-contents)
@@ -16,7 +16,7 @@ Live project is [here]().
 - create a `.env.local` file in the root of the project and paste the below line in it.
 
   `NEXT_PUBLIC_BACKEND_BASE=http://localhost:1337`
-- Here `http://localhost:1337` is the address to the backend server running locally. [Here]() is the backend.
+- Here `http://localhost:1337` is the address to the backend server running locally. [Here](https://github.com/Arpitgoyalgg/chat-nextjs-backend) is the backend project repository.
     
 - `npm run dev` would run the dev server.
 
