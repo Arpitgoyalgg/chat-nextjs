@@ -42,10 +42,6 @@ export default function Messenger(props) {
         }
     }
 
-    // componentWillUnmount() {
-    //     window.removeEventListener('resize', _onResize);
-    // }
-
     const renderChat = (usr_data) => (
 
         <div className={`usr-channel${(props.alert[usr_data])? '-alert' : ''}`} onClick={() => props.setChatUser(usr_data)} >
