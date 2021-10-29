@@ -129,7 +129,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            socket: io('http://localhost:1337'),
+            socket: io(process.env.NEXT_PUBLIC_BACKEND_BASE),
             renderLogin: 1,
             myName: '',
             database: '',
@@ -166,7 +166,7 @@ export default class Home extends Component {
 
 
     callApi = async () => {
-        const response = await fetch('http://localhost:1337/data/all-chats');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/data/all-chats`);
         const body = await response.json();
 
         if (response.status !== 200) throw Error(body.message);
